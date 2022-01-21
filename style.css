@@ -1,0 +1,97 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: var(--light);
+
+    transition: .5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.dark {
+    background: var(--dark);
+    transition: .5s;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    width: 14rem;
+    height: 6.37rem;
+    background: var(--label);
+    border-radius: 3.68rem;
+    padding: .5rem;
+}
+
+.ball {
+    height: 86.31px;
+    width: 86.31px;
+    border-radius: 50%;
+    background: var(--light);
+
+    position: absolute;
+    
+    z-index: 999;
+    
+}
+
+.ball.moveRight {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: moveRight;
+}
+
+@keyframes moveRight {
+    to {
+        margin-left: 121px;
+    }
+}
+
+.ball.moveLeft {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: moveLeft;
+}
+
+@keyframes moveLeft {
+    from {
+        margin-left: 121px;
+    }
+
+    to {
+        margin-left: 0px;
+    }
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.sun img {
+    height: 78.46px;
+    width: 78.46px;
+}
+
+.moon img {
+    height: 77.24px;
+    width: 77.21px;
+}
