@@ -51,7 +51,7 @@
 }
 
 .ball.moveRight {
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-name: moveRight;
 }
@@ -63,7 +63,7 @@
 }
 
 .ball.moveLeft {
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-name: moveLeft;
 }
